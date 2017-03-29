@@ -76,3 +76,16 @@ dburles:factory
 
 # security
 audit-argument-checks@1.0.7
+msavin:mongol
+
+# ui
+twbs:bootstrap@3.3.6
+fortawesome:fontawesome
+
+chart:chart
+rochal:slimscroll
+waitingkuo:metismenu
+bkruse:pace
+flot:flot
+rollypolly:sparkline
+mrt:peity

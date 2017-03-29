@@ -60,7 +60,7 @@
   "layouts": {
     "appBody": {
       "logout": "Logout",
-      "login": "Sign In",
+      "login": "Login to see it in action",
       "join": "Join",
       "newList": "New List",
       "newListError": "Could not create list.",

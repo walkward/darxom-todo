@@ -9,3 +9,17 @@ Template['override-atPwdForm'].replaces('atPwdForm');
 Template['override-atTextInput'].replaces('atTextInput');
 Template['override-atTitle'].replaces('atTitle');
 Template['override-atError'].replaces('atError');
+
+
+Template.Auth_page.rendered = function(){
+
+    // Add gray color for background in blank layout
+    $('body').addClass('gray-bg');
+
+}
+
+Template.Auth_page.destroyed = function(){
+
+    // Remove special color for blank layout
+    $('body').removeClass('gray-bg');
+};

@@ -1,13 +1,10 @@
 <template name="Auth_page">
-  <div class="page auth">
-    <nav>
-      <div class="nav-group">
-        <a href="#" class="js-menu nav-item">
-          <span class="icon-list-unordered"></span>
-        </a>
-      </div>
-    </nav>
-
+  <div class="middle-box text-center loginscreen animated fadeInDown">
+    <div>
+      <h1 class="logo-name">DX</h1>
+    </div>
+    <h3>Welcome to Darxom</h3>
+    <p>Login in. To see it in action.</p>
     <div class="content-scrollable">
       <div class="wrapper-auth">
         {{> atForm}}
@@ -17,14 +14,16 @@
 </template>
 
 <template name="override-atPwdFormBtn">
-  <button type="submit" class="btn-primary">
+  <button type="submit" class="btn btn-primary block full-width m-b">
     {{buttonText}}
   </button>
 </template>
 
 <template name="override-atTextInput">
   <div class="input {{#if isValidating}}validating{{/if}} {{#if hasError}}error{{/if}} {{#if hasSuccess}}has-success{{/if}} {{#if feedback}}has-feedback{{/if}}">
-    <input type="{{type}}" id="at-field-{{_id}}" name="at-field-{{_id}}" placeholder="{{placeholder}}" autocapitalize="none" autocorrect="off">
+    <div class="form-group">
+      <input type="{{type}}" id="at-field-{{_id}}" name="at-field-{{_id}}" placeholder="{{placeholder}}" autocapitalize="none" autocorrect="off" class="form-control">
+    </div>
     {{#if hasIcon}}
         <span class="{{iconClass}}"></span>
     {{/if}}
@@ -35,8 +34,6 @@
 </template>
 
 <template name="override-atTitle">
-  <h1 class="title-auth">{{title}}</h1>
-  <p class="subtitle-auth">{{_ 'useraccounts.atTitle.subtitle'}}</p>
 </template>
 
 <template name="override-atError">
@@ -49,7 +46,7 @@
 
 <template name="override-atPwdForm">
   <div class="at-pwd-form">
-    <form role="form" id="at-pwd-form" class="{{disabled}}" novalidate action="#" method="POST">
+    <form role="form" id="at-pwd-form" class="{{disabled}} m-t" novalidate action="#" method="POST">
       {{#each fields}}
         {{> atInput}}
       {{/each}}
